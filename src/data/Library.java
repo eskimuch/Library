@@ -42,14 +42,17 @@ public class Library {
         return magazines;
     }*/
 
-    public void addPublication(Publication pub){
-        if (publicationsNumber<MAX_PUBLICATIONS){
-            publications[publicationsNumber] = pub;
-            publicationsNumber++;
+    public void addPublication(Publication pub) throws ArrayIndexOutOfBoundsException{
+        if (publicationsNumber==MAX_PUBLICATIONS){
+            throw new ArrayIndexOutOfBoundsException("MAX_PUBLICATIONS "+ MAX_PUBLICATIONS);
         }
-        else {
+        //if (publicationsNumber<MAX_PUBLICATIONS){
+        publications[publicationsNumber] = pub;
+        publicationsNumber++;
+
+/*        else {
             System.out.println("Maksymalna liczba publikacji została osiągnięta");
-        }
+        }*/
     }
 
     public void addBook(Book book) {
@@ -60,7 +63,7 @@ public class Library {
         addPublication(magazine);
     }
 
-    public void printBooks(){
+   /* public void printBooks(){  - passed to LibraryUtils when exceptions added
         int countBooks = 0;
         for (int i=0; i<publicationsNumber; i++){
             if (publications[i] instanceof Book){
@@ -71,7 +74,7 @@ public class Library {
                 System.out.println("Brak książek w bibliotece!");
             }
         }
-    }
+    }*/
 /*    public void printBooks() {
         if (booksNumber==0) {
             System.out.println("Brak książek w bibliotece!");
@@ -82,7 +85,7 @@ public class Library {
         }
     }*/
 
-    public void printMagazines(){
+   /* public void printMagazines(){  - passed to LibraryUtils when exceptions added
         int countMagazines = 0;
         for (int i=0; i<publicationsNumber; i++){
             if (publications[i] instanceof Magazine){
@@ -93,5 +96,5 @@ public class Library {
                 System.out.println("Brak magazynów w bibliotece!");
             }
         }
-    }
+    }*/
 }

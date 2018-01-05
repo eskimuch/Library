@@ -1,12 +1,14 @@
 package app;
 
+import java.util.NoSuchElementException;
+
 public enum Option {
 
     EXIT (0, "Wyjście z programu"),
     ADD_BOOK (1, "Dodanie książki"),
     ADD_MAGAZINE (2, "Dodanie magazynu/gazety"),
     PRINT_BOOKS (3, "Wyświetlenie dostępnych książek"),
-    PRINT_MAGAZINES (4, "WYświetlenie dostępnych magazynów/gazet");
+    PRINT_MAGAZINES (4, "Wyświetlenie dostępnych magazynów/gazet");
 
     private int value;
     private String description;
@@ -29,7 +31,14 @@ public enum Option {
         return value + " - " + description;
     }
 
-    public static Option createFromInt(int option){
-        return Option.values()[option];
+    public static Option createFromInt(int option) throws NoSuchElementException{
+        //return Option.values()[option];
+        Option result = null;
+        try {
+            result = Option.values()[option];
+        } catch (ArrayIndexOutOfBoundsException e){
+            throw new NoSuchElementException("Brak elementu o podanym ID");
+        }
+        return result;
     }
 }
