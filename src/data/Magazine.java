@@ -37,10 +37,10 @@ public class Magazine extends Publication {
         setDay(day);
     }
 
-/*    public void printInfo(){
-        String info = getTitle()+"; "+getPublisher()+"; "+getLangauge()+"; "+getYear()+"-"+getMonth()+"-"+getDay()+"; "+getLangauge();
-        System.out.println(info);
-    }*/
+    //public void printInfo(){
+        //String info = getTitle()+"; "+getPublisher()+"; "+getLangauge()+"; "+getYear()+"-"+getMonth()+"-"+getDay()+"; "+getLangauge();
+        //System.out.println(info);
+    //}
 
     @Override
     public String toString() {
@@ -70,15 +70,15 @@ public class Magazine extends Publication {
         return result;
     }
 
-    /*    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = super.hashCode();
-        result = prime * result + day;
-        result = prime * result + ((language == null) ? 0 : language.hashCode());
-        result = prime * result + month;
-        return result;
-    }*/
+        //@Override
+    //public int hashCode() {
+        //final int prime = 31;
+        //int result = super.hashCode();
+        //result = prime * result + day;
+        //result = prime * result + ((language == null) ? 0 : language.hashCode());
+        //result = prime * result + month;
+        //return result;
+    //}
 
     @Override
     public boolean equals(Object o) {
@@ -93,22 +93,22 @@ public class Magazine extends Publication {
         return langauge != null ? langauge.equals(magazine.langauge) : magazine.langauge == null;
     }
 
-    /*    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (!super.equals(obj)) return false;
-        if (getClass() != obj.getClass()) return false;
+        //@Override
+    //public boolean equals(Object obj) {
+        //if (this == obj) return true;
+        //if (!super.equals(obj)) return false;
+        //if (getClass() != obj.getClass()) return false;
 
-        Magazine other = (Magazine) obj;
+        //Magazine other = (Magazine) obj;
 
-        if (day != other.day) return false;
-        if (language == null) {
-            if (other.language != null)
-                return false;
-        } else if (!language.equals(other.language))
-            return false;
-        if (month != other.month) return false;
-        return true;
-    }*/
+        //if (day != other.day) return false;
+        //if (language == null) {
+            //if (other.language != null)
+                //return false;
+        //} else if (!language.equals(other.language))
+            //return false;
+        //if (month != other.month) return false;
+        //return true;
+    //}
 
 }
