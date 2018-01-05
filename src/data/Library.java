@@ -55,7 +55,8 @@ public class Library {
             System.out.println("Brak książek w bibliotece!");
         }
         for (int x=0; x<booksNumber; x++){
-            books[x].printInfo();
+            //books[x].printInfo();   przed nadpisaniem metody toString w kl.Book
+            System.out.println(books[x]);
         }
 
     }
@@ -65,7 +66,8 @@ public class Library {
             System.out.println("Brak magazynów w bibliotece!");
         }
         for (int x=0; x<magazinesNumber; x++){
-            magazines[x].printInfo();
+            //magazines[x].printInfo();
+            System.out.println(magazines[x]);
         }
     }
 }
